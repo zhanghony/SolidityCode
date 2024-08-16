@@ -7,7 +7,7 @@ pragma solidity ^0.8.0;
 /// @dev Explain to a developer any extra details
 contract SimpleAuction {
 
-    error Adsfsf();
+    
     // 拍卖的参数。
     
     // 或以秒为单位的时间段。

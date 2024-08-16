@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.26+commit.8a97fa7a"
+		"version": "0.8.0+commit.c7dfd78e"
 	},
 	"language": "Solidity",
 	"output": {
@@ -232,7 +232,7 @@
 		"compilationTarget": {
 			".deps/npm/@openzeppelin/contracts/token/ERC20/IERC20.sol": "IERC20"
 		},
-		"evmVersion": "cancun",
+		"evmVersion": "istanbul",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"

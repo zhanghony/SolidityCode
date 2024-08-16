@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.0+commit.c7dfd78e"
+		"version": "0.8.26+commit.8a97fa7a"
 	},
 	"language": "Solidity",
 	"output": {
@@ -184,9 +184,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/demo/Ballot.sol": "Ballot"
+			"demo/Ballot.sol": "Ballot"
 		},
-		"evmVersion": "istanbul",
+		"evmVersion": "cancun",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -198,7 +198,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/demo/Ballot.sol": {
+		"demo/Ballot.sol": {
 			"keccak256": "0x10657f870e1f088fb2582fe2be23cee7b0e733491b4a5e64d8e823db84731c4e",
 			"license": "GPL-3.0",
 			"urls": [

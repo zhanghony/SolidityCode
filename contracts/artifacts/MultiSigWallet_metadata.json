@@ -1,0 +1,428 @@
+{
+	"compiler": {
+		"version": "0.8.0+commit.c7dfd78e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "_owners",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_required",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "txId",
+						"type": "uint256"
+					}
+				],
+				"name": "Approve",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "Deposit",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "txId",
+						"type": "uint256"
+					}
+				],
+				"name": "Execute",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "txId",
+						"type": "uint256"
+					}
+				],
+				"name": "Revoke",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "txId",
+						"type": "uint256"
+					}
+				],
+				"name": "Submit",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_txId",
+						"type": "uint256"
+					}
+				],
+				"name": "approve",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "approved",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					}
+				],
+				"name": "call",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_txId",
+						"type": "uint256"
+					}
+				],
+				"name": "execute",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "isOwner",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "owners",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "required",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_txId",
+						"type": "uint256"
+					}
+				],
+				"name": "revoke",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_data",
+						"type": "bytes"
+					}
+				],
+				"name": "submit",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "transactions",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bool",
+						"name": "executed",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"author": "zhanghony",
+			"details": "1.部署  [\"0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266\",\"0x70997970C51812dc3A010C7d01b50e0d17dc79C8\",\"0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC\",\"0x90F79bf6EB2c4f870365E785982E1f101E93b906\",\"0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65\"] amount 1 2 submit  合约地址 0x3155755b79aA083bd953911C92705B7aA82a18F9  1 0x3155755b79aA083bd953911C92705B7aA82a18F9 3 approve 0   4 切换账号 approve 0 向合约打1 ether 5 execute 0",
+			"events": {
+				"Approve(address,uint256)": {
+					"details": "Explain to a developer any extra details",
+					"params": {
+						"owner": "a parameter just like in doxygen (must be followed by parameter name)",
+						"txId": "a parameter just like in doxygen (must be followed by parameter name)"
+					}
+				},
+				"Deposit(address,uint256)": {
+					"details": "Explain to a developer any extra details",
+					"params": {
+						"amount": "a parameter just like in doxygen (must be followed by parameter name)",
+						"sender": "a parameter just like in doxygen (must be followed by parameter name)"
+					}
+				},
+				"Execute(uint256)": {
+					"details": "Explain to a developer any extra details",
+					"params": {
+						"txId": "a parameter just like in doxygen (must be followed by parameter name)"
+					}
+				},
+				"Revoke(address,uint256)": {
+					"details": "Explain to a developer any extra details",
+					"params": {
+						"owner": "a parameter just like in doxygen (must be followed by parameter name)",
+						"txId": "a parameter just like in doxygen (must be followed by parameter name)"
+					}
+				},
+				"Submit(uint256)": {
+					"details": "Explain to a developer any extra details",
+					"params": {
+						"txId": "a parameter just like in doxygen (must be followed by parameter name)"
+					}
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"approve(uint256)": {
+					"details": "Explain to a developer any extra details",
+					"params": {
+						"_txId": "a parameter just like in doxygen (must be followed by parameter name)"
+					}
+				},
+				"constructor": {
+					"details": "Explain to a developer any extra details",
+					"params": {
+						"_owners": "a parameter just like in doxygen (must be followed by parameter name)",
+						"_required": "执⾏交易所需的最少批准数"
+					}
+				}
+			},
+			"title": "多签名钱包合约",
+			"version": 1
+		},
+		"userdoc": {
+			"events": {
+				"Approve(address,uint256)": {
+					"notice": "当交易被批准时触发"
+				},
+				"Deposit(address,uint256)": {
+					"notice": "当以太币存⼊钱包时触发"
+				},
+				"Execute(uint256)": {
+					"notice": "当交易被执⾏时触发"
+				},
+				"Revoke(address,uint256)": {
+					"notice": "当批准被撤销时触发"
+				},
+				"Submit(uint256)": {
+					"notice": "当提交交易时触发"
+				}
+			},
+			"kind": "user",
+			"methods": {
+				"approve(uint256)": {
+					"notice": "批准交易"
+				},
+				"approved(uint256,address)": {
+					"notice": "存储每个交易被每个所有者批准情况的映射"
+				},
+				"constructor": {
+					"notice": "初始化所有者数组和所需的批准数"
+				},
+				"isOwner(address)": {
+					"notice": "检查某地址是否为所有者的映射"
+				},
+				"owners(uint256)": {
+					"notice": "存储所有者地址的数组"
+				},
+				"required()": {
+					"notice": "执⾏交易所需的最少批准数"
+				},
+				"submit(address,uint256,bytes)": {
+					"notice": "提交新交易"
+				},
+				"transactions(uint256)": {
+					"notice": "存储所有交易的数组"
+				}
+			},
+			"notice": "多签名钱包的使用场景",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/MultiSigWallet.sol": "MultiSigWallet"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/MultiSigWallet.sol": {
+			"keccak256": "0xbc6bd813b4557f35f82decfed8abd9f7145163a576d478ce5a551c2a665f1664",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3cd0ce0c1fa1e53e6400136ad5dd6524e1e9d5b45e8b5062969d11d3cd148b3a",
+				"dweb:/ipfs/QmRFvhAfoBPXkfjsNJBnp1ZEvbeidg45M8WiY5QRopmcTU"
+			]
+		}
+	},
+	"version": 1
+}

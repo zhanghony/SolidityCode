@@ -22,11 +22,6 @@
 				"type": "constructor"
 			},
 			{
-				"inputs": [],
-				"name": "Adsfsf",
-				"type": "error"
-			},
-			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -189,11 +184,11 @@
 	},
 	"sources": {
 		"contracts/demo/SimpleAuction.sol": {
-			"keccak256": "0x0426a5b6de8ffdc2be8a0e6e4afeccfe3e87e5b8ace418b81c9eefcdb4e98321",
+			"keccak256": "0x1ca95845b6f68fa63fc2ebd1bb097d890d3ba2da274002e022e10de7274045dd",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f04d2b5df9233293423275152bf84b43b23b2f49d43e02b0b0585acd94cfd889",
-				"dweb:/ipfs/QmTu5H3XWdRaa5CGtWpDq4Ga1SNWdZ8CjHq3zMbWYQdaaq"
+				"bzz-raw://22e4c7c028d3e71fdd63fc1512d62da7a92cfc73d8effeef01fd5ed8684faf00",
+				"dweb:/ipfs/QmU61CfdDz1DskTrVZBmNeSfqoCMrjapjyHT8C4Lkw8CM8"
 			]
 		}
 	},

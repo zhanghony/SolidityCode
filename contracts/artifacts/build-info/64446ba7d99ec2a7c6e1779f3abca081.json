@@ -1,18 +1,13 @@
 {
-	"id": "036d2c6f5984906afc6affe4fe0747bf",
+	"id": "64446ba7d99ec2a7c6e1779f3abca081",
 	"_format": "hh-sol-build-info-1",
-	"solcVersion": "0.8.26",
-	"solcLongVersion": "0.8.26+commit.8a97fa7a",
+	"solcVersion": "0.8.0",
+	"solcLongVersion": "0.8.0+commit.c7dfd78e",
 	"input": {
 		"language": "Solidity",
-		"sources": {
-			"contracts/Signature.sol": {
-				"content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\n "
-			}
-		},
 		"settings": {
 			"optimizer": {
-				"enabled": false,
+				"enabled": true,
 				"runs": 200
 			},
 			"outputSelection": {
@@ -36,6 +31,11 @@
 				}
 			},
 			"remappings": []
+		},
+		"sources": {
+			"contracts/Signature.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\n "
+			}
 		}
 	},
 	"output": {

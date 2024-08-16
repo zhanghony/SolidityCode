@@ -1,0 +1,46 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "These functions deal with verification of Merkle Tree proofs. The tree and the proofs can be generated using our https://github.com/OpenZeppelin/merkle-tree[JavaScript library]. You will find a quickstart guide in the readme. WARNING: You should avoid using leaf values that are 64 bytes long prior to hashing, or use a hash function other than keccak256 for hashing leaves. This is because the concatenation of a sorted pair of internal nodes in the merkle tree could be reinterpreted as a leaf value. OpenZeppelin's JavaScript library generates merkle trees that are safe against this attack out of the box.",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			".deps/npm/@openzeppelin/contracts/utils/cryptography/MerkleProof.sol": "MerkleProof"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		".deps/npm/@openzeppelin/contracts/utils/cryptography/MerkleProof.sol": {
+			"keccak256": "0xcf688741f79f4838d5301dcf72d0af9eff11bbab6ab0bb112ad144c7fb672dac",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://85d9c87a481fe99fd28a146c205da0867ef7e1b7edbe0036abc86d2e64eb1f04",
+				"dweb:/ipfs/QmR7m1zWQNfZHUKTtqnjoCjCBbNFcjCxV27rxf6iMfhVtG"
+			]
+		}
+	},
+	"version": 1
+}

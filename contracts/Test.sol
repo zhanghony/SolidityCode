@@ -1,13 +1,14 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract Test {
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "./ACCT.sol";
+
+contract Test is Ownable {
     //string  private msg = "hello World";
 
 
-    function sendEth() external  {
-        address _to =   0x40340F24338dc5DFFe9338Be1A114A768541AEe7;
-
+    function sendEth(address _to ) external  {
         payable(_to).transfer(100);
     }
 

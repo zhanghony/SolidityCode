@@ -11,7 +11,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract MerkleTree is Ownable {
     bytes32 private root;
 
-    constructor() Ownable(msg.sender){
+    constructor() Ownable(){
 
     }
  

@@ -33,7 +33,7 @@
 				"inputs": [],
 				"name": "test",
 				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -71,18 +71,18 @@
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": false,
+			"enabled": true,
 			"runs": 200
 		},
 		"remappings": []
 	},
 	"sources": {
 		"contracts/demo/TimeLock.sol": {
-			"keccak256": "0x3f02f41dad6c4f7885a17fe87c53bdb1d5b244602ff95425c189603adf2b5caf",
+			"keccak256": "0xa2ff4315f74b1e8b963cac9f88f4c8c2d979386d77ddabd5c00022627a785fb5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://cb42f21f80b73c158a9b444b9ea463a752296c9a6d9eb6e848f686d9571ea8b2",
-				"dweb:/ipfs/QmYGT1TiAguLA6PKFF4zmN1sGpjf5T6zjFERuvZn1a98fW"
+				"bzz-raw://c7f0702080438538d64d2e7d77d1d3058ed211e70fab80812e520a220051a5a6",
+				"dweb:/ipfs/QmcgmPWFvWRtEzmzLUExYVEFATyxLcNZWdL14JgpxbAcHJ"
 			]
 		}
 	},

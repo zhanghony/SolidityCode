@@ -1,0 +1,46 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "在 UFixed256x18 上进行浮点操作的精简库。",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"demo/TypeOfData.sol": "FixedMath"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"demo/TypeOfData.sol": {
+			"keccak256": "0xa4655b9b5da10786fe7303880d72e041fb94d7116cabcfeaa1e7c9248912b40b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4958a982cff1c06199974d27ad3f754ab73d082286f13308eb3b9d6bb4a1a605",
+				"dweb:/ipfs/QmW7Ajd8By1rnArB8GxB94BPrwxgCtb8CK1YPdvBvKdyHk"
+			]
+		}
+	},
+	"version": 1
+}

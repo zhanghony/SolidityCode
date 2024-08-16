@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.0+commit.c7dfd78e"
+		"version": "0.8.26+commit.8a97fa7a"
 	},
 	"language": "Solidity",
 	"output": {
@@ -44,7 +44,7 @@
 		"compilationTarget": {
 			"contracts/demo/EnglishAuction.sol": "IERC721"
 		},
-		"evmVersion": "istanbul",
+		"evmVersion": "cancun",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"

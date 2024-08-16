@@ -50,13 +50,13 @@ contract callOther {
         address _addr,
         string memory _name,
         uint256 _age
-    ) external payable {
-        bytes memory data = abi.encodeWithSignature(
+    ) external payable returns ( bytes memory data) {
+        data = abi.encodeWithSignature(
             "setNameAndAge(string,uint256)",
             _name,
             _age
         );
-        (bool success, bytes memory _bys) = _addr.call{value: msg.value}(data);
+        (bool success, ) = _addr.call{value: msg.value}(data);
         require(success, "Call Failed");
     }
 
@@ -65,17 +65,18 @@ contract callOther {
     //委托对方调用自己数据的。类似授权转账，比如我部署一个 Bank 合约， 授权 ContractA 使用 Bank 地址内的资金，ContractA 只拥有控制权，但是没有拥有权。
     //所有变量修改都是发生在委托合约内部，并不会保存在被委托合约中。利用这个特性，可以通过更换被委托合约，来升级委托合约。
     //委托调用合约内部，需要和被委托合约的内部参数完全一样，否则容易导致数据混乱可以通过顺序来避免这个问题，但是推荐完全一样
-    function delegatecall(address _addr) external {
+    function delegatecall(address _addr ) external returns (bytes memory data1,bytes memory data2){
         uint256 _num = 23;
         // 不需知道合约名字，函数完全自定义
-        bytes memory data1 = abi.encodeWithSignature("set(uint256)", _num);
+        data1 = abi.encodeWithSignature("set(uint256)", _num);
 
         // 需要合约名字，可以避免函数和参数写错
-        bytes memory data2 = abi.encodeWithSelector(
+        data2 = abi.encodeWithSelector(
             callOther.test.selector,
             _num
         );
-        (bool success, bytes memory _data) = _addr.delegatecall(data2);
+        (bool success, ) = _addr.delegatecall(data2);
+         require(success, "Call Failed");
     }
 
 

@@ -1,0 +1,241 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_token",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "campaigns",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "creator",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "goal",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint32",
+						"name": "startAt",
+						"type": "uint32"
+					},
+					{
+						"internalType": "uint32",
+						"name": "endAt",
+						"type": "uint32"
+					},
+					{
+						"internalType": "bool",
+						"name": "claimed",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pledged",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "count",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "pledge",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "pledgedAmount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "token",
+				"outputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "unpledge",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "zhagnhony",
+			"details": "创建众筹活动,取消众筹活动,⽀持者参与和取消参与众筹,领取众筹成功的代币,退款失败的众筹代币",
+			"kind": "dev",
+			"methods": {
+				"constructor": {
+					"params": {
+						"_token": "初始化代币地址"
+					}
+				},
+				"pledge(uint256,uint256)": {
+					"details": "验证活动已开始且未结束",
+					"params": {
+						"_amount": "a parameter just like in doxygen (must be followed by parameter name)",
+						"_id": "a parameter just like in doxygen (must be followed by parameter name)"
+					}
+				},
+				"unpledge(uint256,uint256)": {
+					"details": "验证活动未结束",
+					"params": {
+						"_amount": "a parameter just like in doxygen (must be followed by parameter name)",
+						"_id": "a parameter just like in doxygen (must be followed by parameter name)"
+					}
+				}
+			},
+			"title": "基于ERC20代币创建众筹合约",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"campaigns(uint256)": {
+					"notice": "存储众筹活动"
+				},
+				"constructor": {
+					"notice": "构造函数"
+				},
+				"count()": {
+					"notice": "众筹活动计数器"
+				},
+				"pledge(uint256,uint256)": {
+					"notice": "⽤⼾参与众筹，出资代币"
+				},
+				"pledgedAmount(uint256,address)": {
+					"notice": "⽤⼾在特定众筹活动中的出资记录"
+				},
+				"token()": {
+					"notice": "众筹使⽤的ERC20代币"
+				},
+				"unpledge(uint256,uint256)": {
+					"notice": "⽤⼾取消参与众筹，退还出资的代币"
+				}
+			},
+			"notice": "掌握如何使⽤Solidity0.8开发众筹合约",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"demo/CrowdFund.sol": "CrowdFund"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x287b55befed2961a7eabd7d7b1b2839cbca8a5b80ef8dcbb25ed3d4c2002c305",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bd39944e8fc06be6dbe2dd1d8449b5336e23c6a7ba3e8e9ae5ae0f37f35283f5",
+				"dweb:/ipfs/QmPV3FGYjVwvKSgAXKUN3r9T9GwniZz83CxBpM7vyj2G53"
+			]
+		},
+		"demo/CrowdFund.sol": {
+			"keccak256": "0xd0e825161a9319eb7c9c3c0d6fd059505462c1db511d3c9f28f06c2ba1f42ce5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4da1b3efe71c4f379032f7c89ee5eaee55f64981757744af096974fa51efc456",
+				"dweb:/ipfs/QmV9K7tjpnm674FZKcETYKLUjySjphXETNm7R9mZnKo9cx"
+			]
+		}
+	},
+	"version": 1
+}
