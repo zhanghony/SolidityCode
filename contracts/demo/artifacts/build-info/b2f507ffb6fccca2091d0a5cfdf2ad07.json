@@ -1,0 +1,72 @@
+{
+	"id": "b2f507ffb6fccca2091d0a5cfdf2ad07",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.26",
+	"solcLongVersion": "0.8.26+commit.8a97fa7a",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/demo/CrowdFund.sol": {
+				"content": "// // SPDX-License-Identifier: MIT\r\n// pragma solidity ^0.8.0;\r\n// // import \"@openzeppelin/contracts/token/ERC20/IERC20.sol\";\r\n\r\n// import \"@openzeppelin/contracts/token/ERC20/IERC20.sol\";\r\n\r\n\r\n// /// @title 基于ERC20代币创建众筹合约\r\n// /// @author zhagnhony\r\n// /// @notice 掌握如何使⽤Solidity0.8开发众筹合约\r\n// /// @dev 创建众筹活动,取消众筹活动,⽀持者参与和取消参与众筹,领取众筹成功的代币,退款失败的众筹代币\r\n// contract CrowdFund {\r\n//     struct Campaign {\r\n//         /// @notice 众筹创建者的地址\r\n//         address creator;\r\n//         /// @notice 众筹⽬标⾦额\r\n//         uint256 goal;\r\n//         /// @notice 众筹开始时间\r\n//         uint32 startAt;\r\n//         /// @notice 众筹结束时间\r\n//         uint32 endAt;\r\n//         /// @notice 是否已领取众筹代币\r\n//         bool claimed;\r\n//         /// @notice 已筹集的代币数量\r\n//         uint256 pledged;\r\n//     }\r\n//     /// @notice 众筹使⽤的ERC20代币\r\n//     IERC20 public immutable token;\r\n//     /// @notice 存储众筹活动\r\n//     mapping(uint256 => Campaign) public campaigns;\r\n//     /// @notice 众筹活动计数器\r\n//     uint256 public count;\r\n//     /// @notice ⽤⼾在特定众筹活动中的出资记录\r\n//     mapping(uint256 => mapping(address => uint256)) public pledgedAmount;\r\n\r\n//     /// 构造函数\r\n//     /// @param _token 初始化代币地址\r\n//     constructor(address _token) {\r\n//         token = IERC20(_token);\r\n//     }\r\n\r\n//     /// @notice ⽤⼾参与众筹，出资代币\r\n//     /// @dev 验证活动已开始且未结束\r\n//     /// @param _id a parameter just like in doxygen (must be followed by parameter name)\r\n//     /// @param _amount a parameter just like in doxygen (must be followed by parameter name)\r\n//     /// @return Documents the return variables of a contract’s function state variable\r\n//     /// @inheritdoc\tCopies all missing tags from the base function (must be followed by the contract name)\r\n//     function pledge(uint256 _id, uint256 _amount) external {\r\n//         Campaign storage campaign = campaigns[_id];\r\n//         require(block.timestamp >= campaign.startAt, \"Campaign not started\");\r\n//         require(block.timestamp <= campaign.endAt, \"Campaign ended\");\r\n//         campaign.pledged += _amount;\r\n//         pledgedAmount[_id][msg.sender] += _amount;\r\n//         token.transferFrom(msg.sender, address(this), _amount);\r\n//     }\r\n\r\n//     /// @notice ⽤⼾取消参与众筹，退还出资的代币\r\n//     /// @dev 验证活动未结束\r\n//     /// @param _id a parameter just like in doxygen (must be followed by parameter name)\r\n//     /// @param _amount a parameter just like in doxygen (must be followed by parameter name)\r\n//     /// @inheritdoc\tCopies all missing tags from the base function (must be followed by the contract name)\r\n//     function unpledge(uint256 _id, uint256 _amount) external {\r\n//         Campaign storage campaign = campaigns[_id];\r\n//         require(block.timestamp <= campaign.endAt, \"Campaign ended\");\r\n//         campaign.pledged -= _amount;\r\n//         pledgedAmount[_id][msg.sender] -= _amount;\r\n//         token.transfer(msg.sender, _amount);\r\n//     }\r\n// }\r\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"errors": [
+			{
+				"component": "general",
+				"errorCode": "3420",
+				"formattedMessage": "Warning: Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.26;\"\n--> contracts/demo/CrowdFund.sol\n\n",
+				"message": "Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.26;\"",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "contracts/demo/CrowdFund.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"contracts/demo/CrowdFund.sol": {
+				"ast": {
+					"absolutePath": "contracts/demo/CrowdFund.sol",
+					"exportedSymbols": {},
+					"id": 1,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [],
+					"src": "3260:0:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

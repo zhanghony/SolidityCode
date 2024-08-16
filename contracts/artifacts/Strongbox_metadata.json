@@ -1,0 +1,104 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_key",
+						"type": "string"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_sig",
+						"type": "bytes"
+					}
+				],
+				"name": "getSecretByKey",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "_value",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getSecretKey",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "_keys",
+						"type": "string[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_key",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_value",
+						"type": "string"
+					}
+				],
+				"name": "putSecret",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "zhanghony",
+			"kind": "dev",
+			"methods": {},
+			"title": "智能保险箱",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "一款智能加密的区块链数据，只有自己才能看到自己的数据，可以放一些比较私密的数据",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Strongbox.sol": "Strongbox"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Strongbox.sol": {
+			"keccak256": "0x0ef4b50f9a5f3f939e04f460b25a28a6a0104edbdca5cd11f5bb7e4cecc2cef4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e10be43bf4a9c3cd07a9d53ed0da894105d35da776ad26e5ecf70c1275fee103",
+				"dweb:/ipfs/QmcbvPRNm7F7r8gTSwGZ8EPDV34KqQzbiv6upnVbu36QyX"
+			]
+		}
+	},
+	"version": 1
+}

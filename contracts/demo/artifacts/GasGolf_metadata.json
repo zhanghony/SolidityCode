@@ -1,0 +1,76 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "nums",
+						"type": "uint256[]"
+					}
+				],
+				"name": "sumIfEvenAndLessThan99",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "total",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "The name of the author",
+			"details": "使⽤calldata代替memory：通过改变变量存储位置来减少燃⽓消耗。 循环内部变量优化：在循环开始前将状态变量加载到内存，循环结束后再更新状态变量 表达式短路（ShortCircuiting）：优化条件判断逻辑，避免不必要的计算。 循环增量简化：使⽤++i 代替i + 1来减少操作。 缓存数组⻓度：将数组⻓度存储在局部变量中，减少每次循环的计算量 数组元素加载到内存：将频繁访问的数组元素预先加载到变量中",
+			"kind": "dev",
+			"methods": {},
+			"title": "A title that should describe the contract/interface",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Explain to an end user what this does",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/demo/GasDemo.sol": "GasGolf"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/demo/GasDemo.sol": {
+			"keccak256": "0x67c4de38ec7345713a72964362cd80c55d2148655320ab25cbb3df898ffc24b5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2000f1562c4322539509d2982e50f264db55fe63cd3380658a1dccf169580270",
+				"dweb:/ipfs/QmdxJwvHq2Sb9wLgAWojyjgxJJDFNcVni3Bjb7apwBN56W"
+			]
+		}
+	},
+	"version": 1
+}

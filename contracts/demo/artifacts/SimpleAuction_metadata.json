@@ -1,0 +1,201 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "biddingTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address payable",
+						"name": "beneficiaryAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "Adsfsf",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "winner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "AuctionEnded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "bidder",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "HighestBidIncreased",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "auctionEnd",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "auctionEndTime",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "beneficiary",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "bid",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "highestBid",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "highestBidder",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "zhanghony",
+			"details": "Explain to a developer any extra details",
+			"kind": "dev",
+			"methods": {},
+			"title": "简单的公开拍卖",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"auctionEnd()": {
+					"notice": "结束拍卖，并把最高的出价发送给受益人。"
+				},
+				"bid()": {
+					"notice": "对拍卖进行出价，具体的出价随交易一起发送。 如果没有在拍卖中胜出，则返还出价。"
+				},
+				"constructor": {
+					"notice": "以受益者地址 `beneficiaryAddress` 创建一个简单的拍卖， 拍卖时长为 `_biddingTime`。"
+				},
+				"withdraw()": {
+					"notice": "撤回出价过高的竞标。"
+				}
+			},
+			"notice": "下面这个简单的拍卖合约的总体思路是，每个人都可以在竞标期间发送他们的竞标。 竞标已经包括发送资金/以太币，以便将竞标者与他们的竞标绑定。 如果最高出价被提高，之前的最高出价者就会拿回他们的钱。 竞价期结束后，受益人需要手动调用合约，才能收到他们的钱 - 合约不能自己激活接收。",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/demo/SimpleAuction.sol": "SimpleAuction"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/demo/SimpleAuction.sol": {
+			"keccak256": "0x0426a5b6de8ffdc2be8a0e6e4afeccfe3e87e5b8ace418b81c9eefcdb4e98321",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f04d2b5df9233293423275152bf84b43b23b2f49d43e02b0b0585acd94cfd889",
+				"dweb:/ipfs/QmTu5H3XWdRaa5CGtWpDq4Ga1SNWdZ8CjHq3zMbWYQdaaq"
+			]
+		}
+	},
+	"version": 1
+}

@@ -4,16 +4,18 @@
   "description": "这里保存solidity的基础语法内容",
   "main": "index.js",
   "scripts": {
-    "compile" : "npx hardhat compile",
+    "compile" : "npx hardhat compile && echo 'success'",
     "test" : "npx hardhat test",
-
     "testt": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "zhanghony",
+  "license": "MIT",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "hardhat": "^2.22.7"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.0.2"
   }
 }

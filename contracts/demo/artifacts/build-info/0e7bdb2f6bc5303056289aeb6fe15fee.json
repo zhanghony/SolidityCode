@@ -1,0 +1,72 @@
+{
+	"id": "0e7bdb2f6bc5303056289aeb6fe15fee",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.26",
+	"solcLongVersion": "0.8.26+commit.8a97fa7a",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/demo/TypeOfData.sol": {
+				"content": "// // SPDX-License-Identifier: MIT\r\n// pragma solidity ^0.8.0;\r\n\r\n// /************************************* 用户定义的值类型 ****************************************************************/\r\n// // 使用用户定义的值类型表示 18 位小数、256 bit的浮点类型。\r\n// type UFixed256x18 is uint256;\r\n\r\n// /// 在 UFixed256x18 上进行浮点操作的精简库。\r\n// library FixedMath {\r\n//     uint constant multiplier = 10**18;\r\n\r\n//     /// 两个 UFixed256x18 数相加，\r\n//     /// 溢出时恢复，依赖于 uint256 上的检查算术\r\n//      function add(UFixed256x18 a, UFixed256x18 b) internal pure returns (UFixed256x18) {\r\n//         return UFixed256x18.wrap(UFixed256x18.unwrap(a) + UFixed256x18.unwrap(b));\r\n//     }\r\n//     /// 将 UFixed256x18 和 uint256 相乘.\r\n//     /// 溢出时恢复，依赖于 uint256 上的检查算术\r\n//      function mul(UFixed256x18 a, uint256 b) internal pure returns (UFixed256x18) {\r\n//         return UFixed256x18.wrap(UFixed256x18.unwrap(a) * b);\r\n//     }\r\n//     ///  UFixed256x18 向下取整.\r\n//     /// @return 不超过 `a` 的最大整数。\r\n//     function floor(UFixed256x18 a) internal pure returns (uint256) {\r\n//         return UFixed256x18.unwrap(a) / multiplier;\r\n//     }\r\n//     /// 将 uint256 转换为相同值的 UFixed256x18。\r\n//     /// 如果整数太大，则还原。\r\n//     function toUFixed256x18(uint256 a) internal pure returns (UFixed256x18) {\r\n//         return UFixed256x18.wrap(a * multiplier);\r\n//     }\r\n// }\r\n\r\n// contract TypeOfData {\r\n//     // 枚举类型的默认值是第一个值。\r\n//     // 结构\r\n//     enum Status {\r\n//         None, // 0\r\n//         Pending, // 1\r\n//         Shiped, // 2\r\n//         Completed,\r\n//         Rejected,\r\n//         Canceled\r\n//     }\r\n\r\n//     // 变量\r\n//     Status public status;\r\n\r\n// // 设置索引值\r\n//     function set(Status _status) external {\r\n//         status = _status;\r\n//     }\r\n\r\n//     // 由于枚举类型不属于 |ABI| 的一部分，因此对于所有来自 Solidity 外部的调用，\r\n//     // \"getStatus\" 的签名会自动被改成 \"getStatus() returns (uint8)\"。\r\n//     function getStatus() public view returns (Status) {\r\n//         return status;\r\n//     }\r\n\r\n//     function getDefaultStatus() public view returns (uint256) {\r\n//         return uint256(status);\r\n//     }\r\n\r\n//     // 设置\r\n//     function ship() external {\r\n//         status = Status.Shiped;\r\n//     }\r\n\r\n//     // 恢复为0\r\n//     function reset() external {\r\n//         delete status;\r\n//     }\r\n\r\n//     function getLargestValue() public pure returns (Status) {\r\n//         return type(Status).max;\r\n//     }\r\n\r\n//     function getSmallestValue() public pure returns (Status) {\r\n//         return type(Status).min;\r\n//     }\r\n\r\n\r\n//     //int8 to int256 8 位到 256 位的带符号整型数。\r\n//     //uint8 to uint256 8 位到 256 位的无符号整型。\r\n//     //int 有符号整数，int 与 int256 相同。\r\n//     //uint 无符号整数，uint 和 uint256 是一样的。\r\n//     //fixed 有符号的定长浮点型\r\n//     //unfixed 无符号的定长浮点型\r\n//     function getMin() external pure returns (uint256) {\r\n//         return type(uint256).min;\r\n//     }\r\n\r\n//     function getMax() external pure returns (uint256) {\r\n//         return type(uint256).max;\r\n//     }\r\n\r\n//     function getString() external pure {\r\n//         string memory s1 = unicode\"同志们好\";\r\n//         s1 = \"sfsfsdf\";\r\n//         //用空格分开的字符串\r\n//         string memory a = \"a\"\r\n//         \"b\";\r\n//     }\r\n\r\n//     function getHex() external pure {\r\n//         bytes1  b1 = hex\"61\";\r\n//         b1[0] = \"a\";\r\n//         b1[0] = 0x61;\r\n\r\n//         //用空格分隔的多个十六进制字面常量被合并为一个字面常量： hex\"61\" hex\"61\" 等同于 hex\"6161\"\r\n//         bytes2 = hex\"61\" hex\"61\";\r\n\r\n//     }\r\n\r\n\r\n\r\n\r\n\r\n\r\n// /*************************************** address/uint/bytes32 之间的转换 ***************************************************/\r\n\r\n//     /**\r\n//      * 1 字节 8 位，一个 address 是 20 个字节，是 160 位，所以 address 可以用 uint160 表示。\r\n//      * 1 字节可以表示为两个连续的十六进制数字，所以 address 可以用连续的 40 个十六进制数字表示。\r\n//      * @param _a \r\n//      */\r\n//     function bytes32ToAddress(bytes32 _a) external pure returns (address) {\r\n//         //\r\n\r\n\r\n//         // return address(uint160(bytes20(_a)));\r\n//         return address(uint160(uint256(_a)));\r\n//     }\r\n\r\n\r\n//     //地址方法\r\n//     function demoAddress(address _addr) external {\r\n//         // 以 Wei 为单位的余额\r\n//        uint256 balance =  _addr.balance;\r\n//        //code : 地址上的代码(可以为空) 不为空说明是合约\r\n//        bytes memory code = _addr.code;\r\n\r\n//         bytes32 codehash = _addr.codehash;\r\n\r\n//         //合约地址\r\n//         //address(this);\r\n\r\n\r\n//         // payable()将普通地址转为可支付地址。\r\n//         // .transfer(uint256 amount): 将余额转到当前地址（合约地址转账）\r\n//         //_addr.send(uint256 amount): 将余额转到当前地址，并返回交易成功状态（合约地址转账）\r\n//         //用给定的有效载荷（payload）发出低级 CALL 调用，并返回交易成功状态和返回数据（调用合约的方法并转账）\r\n//         //_addr.call(bytes memory);\r\n//         // 用给定的有效载荷（payload）发出低级 DELEGATECALL 调用，并返回交易成功状态和返回数据（调用合约的方法并转账）\r\n//         //_addr.delegatecall(bytes memory);\r\n//         //用给定的有效载荷（payload）发出低级 STATICCALL 调用，并返回交易成功状态和返回数据（调用合约的方法并转账）\r\n//         //_addr.staticcall(bytes memory);\r\n//     } \r\n\r\n\r\n//     // 获取即将部署的地址\r\n//     function getAddress(bytes memory bytecode, uint256 _salt)\r\n//         external\r\n//         view\r\n//         returns (address)\r\n//     {\r\n//         bytes32 hash = keccak256(\r\n//             abi.encodePacked(\r\n//                 bytes1(0xff), // 固定字符串\r\n//                 address(this), // 当前工厂合约地址\r\n//                 _salt, // salt\r\n//                 keccak256(bytecode) //部署合约的 bytecode\r\n//             )\r\n//         );\r\n//         return address(uint160(uint256(hash)));\r\n//     }\r\n\r\n\r\n// }\r\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"errors": [
+			{
+				"component": "general",
+				"errorCode": "3420",
+				"formattedMessage": "Warning: Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.26;\"\n--> contracts/demo/TypeOfData.sol\n\n",
+				"message": "Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.26;\"",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "contracts/demo/TypeOfData.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"contracts/demo/TypeOfData.sol": {
+				"ast": {
+					"absolutePath": "contracts/demo/TypeOfData.sol",
+					"exportedSymbols": {},
+					"id": 1,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [],
+					"src": "6473:0:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
