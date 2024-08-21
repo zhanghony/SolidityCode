@@ -84,3 +84,8 @@ $ npm install @openzeppelin/contracts
 0x40340F24338dc5DFFe9338Be1A114A768541AEe7
 
 ```
+
+
+预言机
+
+npm install --save-dev @chainlink/hardhat-chainlink

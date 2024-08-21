@@ -1,0 +1,27 @@
+ethers v6 文档 https://docs.ethers.org/v6/
+
+
+
+
+
+{
+  "name": "soliditycode",
+  "version": "1.0.0",
+  "description": "这里保存solidity的基础语法内容",
+  "main": "index.js",
+  "scripts": {
+    "compile" : "npx hardhat compile && echo 'success'",
+    "test" : "npx hardhat test",
+    "testt": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "zhanghony",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.8"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.0.2"
+  }
+}

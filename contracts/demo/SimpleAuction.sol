@@ -6,10 +6,8 @@ pragma solidity ^0.8.0;
 /// @notice 下面这个简单的拍卖合约的总体思路是，每个人都可以在竞标期间发送他们的竞标。 竞标已经包括发送资金/以太币，以便将竞标者与他们的竞标绑定。 如果最高出价被提高，之前的最高出价者就会拿回他们的钱。 竞价期结束后，受益人需要手动调用合约，才能收到他们的钱 - 合约不能自己激活接收。
 /// @dev Explain to a developer any extra details
 contract SimpleAuction {
-
-    
     // 拍卖的参数。
-    
+
     // 或以秒为单位的时间段。
     address payable public beneficiary;
     // 时间是 unix 的绝对时间戳（自1970-01-01以来的秒数）
@@ -58,12 +56,9 @@ contract SimpleAuction {
         // 关键字 `payable` 是函数能够接收以太币的必要条件。
 
         // 如果拍卖已结束，撤销函数的调用。
-        if (block.timestamp > auctionEndTime) revert("AuctionAlreadyEnded");
 
-        // 如果出价不高，就把钱送回去
-        //（revert语句将恢复这个函数执行中的所有变化，
-        // 包括它已经收到钱）。
-        if (msg.value <= highestBid) revert("BidNotHighEnough(highestBid)") ;
+        require(block.timestamp <= auctionEndTime, "AuctionAlreadyEnded");
+        require(msg.value > highestBid, "BidNotHighEnough");
 
         if (highestBid != 0) {
             // 简单地使用 highestBidder.send(highestBid)
@@ -80,21 +75,28 @@ contract SimpleAuction {
     /// 撤回出价过高的竞标。
     function withdraw() external returns (bool) {
         uint amount = pendingReturns[msg.sender];
-        if (amount > 0) {
-            // 将其设置为0是很重要的，
-            // 因为接收者可以在 `send` 返回之前再次调用这个函数
-            // 作为接收调用的一部分。
-            pendingReturns[msg.sender] = 0;
+        require(amount > 0, "No funds to withdraw");
 
-            // msg.sender 不属于 `address payable` 类型，
-            // 必须使用 `payable(msg.sender)` 明确转换，
-            // 以便使用成员函数 `send()`。
-            if (!payable(msg.sender).send(amount)) {
-                // 这里不需抛出异常，只需重置未付款
-                pendingReturns[msg.sender] = amount;
-                return false;
-            }
+        // 将其设置为0是很重要的，
+        // 因为接收者可以在 `send` 返回之前再次调用这个函数
+        // 作为接收调用的一部分。
+        pendingReturns[msg.sender] = 0;
+
+        // msg.sender 不属于 `address payable` 类型，
+        // 必须使用 `payable(msg.sender)` 明确转换，
+        // 以便使用成员函数 `send()`。
+        // if (!payable(msg.sender).send(amount)) {
+        //     // 这里不需抛出异常，只需重置未付款
+        //     pendingReturns[msg.sender] = amount;
+        //     return false;
+        // }
+
+        (bool success, ) = msg.sender.call{value: amount}("");
+        if (!success) {
+            pendingReturns[msg.sender] = amount;
+            return false;
         }
+
         return true;
     }
 
@@ -111,8 +113,9 @@ contract SimpleAuction {
         // 则它也会被认为是与外部合约有交互的。
 
         // 1. 条件
-        if (block.timestamp < auctionEndTime) revert(" AuctionNotYetEnded()");
-        if (ended) revert(" AuctionEndAlreadyCalled()");
+
+        require(block.timestamp >= auctionEndTime, "AuctionNotYetEnded");
+        require(!ended, "AuctionEndAlreadyCalled");
 
         // 2. 影响
         ended = true;

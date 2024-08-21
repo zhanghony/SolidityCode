@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.0+commit.c7dfd78e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/demo/Balances.sol": "Balances"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/demo/Balances.sol": {
+			"keccak256": "0x05aba3a5cb171d14e4d40afab710387576e5b9be1a5e5b007ae3b1b1d7211c5a",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://f5dd2294966418e5199e63748c18a2dc42a21ac937d5043afaad8d22d9733507",
+				"dweb:/ipfs/QmdP7DckGUV1BRJ93DA5AKj4a4cbVugzzvzb3LjHeRqQdD"
+			]
+		}
+	},
+	"version": 1
+}

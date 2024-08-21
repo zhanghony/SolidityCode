@@ -83,7 +83,7 @@ contract TypeOfData {
         delete status;
     }
 
-    // function getLargestValue() public pure returns (Status) {
+    // function getLargestValue() public pure returns (uint256) {
     //     return type(Status).max;
     // }
 
