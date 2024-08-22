@@ -1,8 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "@openzeppelin/contracts/access/Ownable.sol";
-
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 contract MyToken is IERC20 {
@@ -31,18 +29,18 @@ contract MyToken is IERC20 {
      */
     mapping(address => mapping(address => uint256)) public override allowance;
 
-    // /**
-    //  * @dev Emitted when `value` tokens are moved from one account (`from`) to
-    //  * another (`to`).
-    //  *
-    //  * Note that `value` may be zero.
-    //  */
+    /**
+     * @dev Emitted when `value` tokens are moved from one account (`from`) to
+     * another (`to`).
+     *
+     * Note that `value` may be zero.
+     */
     // event Transfer(address indexed from, address indexed to, uint256 value);
 
-    // /**
-    //  * @dev Emitted when the allowance of a `spender` for an `owner` is set by
-    //  * a call to {approve}. `value` is the new allowance.
-    //  */
+    /**
+     * @dev Emitted when the allowance of a `spender` for an `owner` is set by
+     * a call to {approve}. `value` is the new allowance.
+     */
     // event Approval(address indexed owner, address indexed spender, uint256 value);
 
     constructor(
@@ -184,10 +182,15 @@ contract Airdrop {
         owner = msg.sender;
     }
 
+    // 只有合约发布者可以调用
+    modifier onlyOwner() {
+        require(owner == msg.sender, "Only owner can call this function");
+        _;
+    }
+
     // 空投代币，多个地址对应一个数量
-    function oneToMany(address[] memory _to, uint256 _amount) public {
-        // 只有合约发布者可以调用
-        require(msg.sender == owner, "Only the owner can airdrop tokens");
+    function oneToMany(address[] memory _to, uint256 _amount) onlyOwner public {
+        
         // 验证合约中的代币数量是否足够
         uint256 totalAmount = _amount * _to.length;
         require(
@@ -201,9 +204,7 @@ contract Airdrop {
     }
 
     // 空投代币，一个地址对应一个数量
-    function oneToOne(address[] memory _to, uint256[] memory _amount) public {
-        // 只有合约发布者可以调用
-        require(msg.sender == owner, "Only the owner can airdrop tokens");
+    function oneToOne(address[] memory _to, uint256[] memory _amount) onlyOwner public {
         // 验证数组长度是否相等
         require(
             _to.length == _amount.length,
@@ -223,4 +224,5 @@ contract Airdrop {
             tokenContract.transfer(_to[i], _amount[i]);
         }
     }
+ 
 }
