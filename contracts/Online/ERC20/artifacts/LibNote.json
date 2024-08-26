@@ -1,0 +1,98 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "6080604052348015600e575f80fd5b50603e80601a5f395ff3fe60806040525f80fdfea264697066735822122092a250d77d19f874bc9e2ca7e629716057666b360feb87146e7adb36ed9fb06e64736f6c634300081a0033",
+			"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xE JUMPI PUSH0 DUP1 REVERT JUMPDEST POP PUSH1 0x3E DUP1 PUSH1 0x1A PUSH0 CODECOPY PUSH0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 SWAP3 LOG2 POP 0xD7 PUSH30 0x19F874BC9E2CA7E629716057666B360FEB87146E7ADB36ED9FB06E64736F PUSH13 0x634300081A0033000000000000 ",
+			"sourceMap": "993:1203:0:-:0;;;;;;;;;;;;;;;;;;;"
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "60806040525f80fdfea264697066735822122092a250d77d19f874bc9e2ca7e629716057666b360feb87146e7adb36ed9fb06e64736f6c634300081a0033",
+			"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 SWAP3 LOG2 POP 0xD7 PUSH30 0x19F874BC9E2CA7E629716057666B360FEB87146E7ADB36ED9FB06E64736F PUSH13 0x634300081A0033000000000000 ",
+			"sourceMap": "993:1203:0:-:0;;;;;"
+		},
+		"gasEstimates": {
+			"creation": {
+				"codeDepositCost": "12400",
+				"executionCost": "64",
+				"totalCost": "12464"
+			}
+		},
+		"methodIdentifiers": {}
+	},
+	"abi": [
+		{
+			"anonymous": true,
+			"inputs": [
+				{
+					"indexed": true,
+					"internalType": "bytes4",
+					"name": "sig",
+					"type": "bytes4"
+				},
+				{
+					"indexed": true,
+					"internalType": "address",
+					"name": "usr",
+					"type": "address"
+				},
+				{
+					"indexed": true,
+					"internalType": "bytes32",
+					"name": "arg1",
+					"type": "bytes32"
+				},
+				{
+					"indexed": true,
+					"internalType": "bytes32",
+					"name": "arg2",
+					"type": "bytes32"
+				},
+				{
+					"indexed": false,
+					"internalType": "bytes",
+					"name": "data",
+					"type": "bytes"
+				}
+			],
+			"name": "LogNote",
+			"type": "event"
+		}
+	]
+}

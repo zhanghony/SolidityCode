@@ -1,0 +1,36 @@
+{
+	"compiler": {
+		"version": "0.4.26+commit.4563c3fc"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Online/NFT/KnownOriginDigitalAssetV2.sol": "AddressUtils"
+		},
+		"evmVersion": "byzantium",
+		"libraries": {},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Online/NFT/KnownOriginDigitalAssetV2.sol": {
+			"keccak256": "0x5dcda4d3d013bd9344995c93405a05a5bca40979fb4709b204c5cf0c686f71e7",
+			"urls": [
+				"bzzr://dd568e353fdbc69d2bd656e6325e110e85164d8ee10225dd02fae80e5944cfb0"
+			]
+		}
+	},
+	"version": 1
+}

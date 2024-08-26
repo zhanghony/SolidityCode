@@ -3,6 +3,7 @@ require("@nomicfoundation/hardhat-toolbox");
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   defaultNetwork: "local",
+  chainId: 31337,
   solidity: {
     compilers: [
       {
@@ -17,6 +18,9 @@ module.exports = {
       {
         version: "0.4.24",
       },
+      {
+        version: "0.5.12",
+      }
     ],
   },
   networks: {

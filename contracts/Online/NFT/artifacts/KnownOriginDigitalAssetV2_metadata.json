@@ -1,0 +1,2194 @@
+{
+	"compiler": {
+		"version": "0.4.26+commit.4563c3fc"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_interfaceId",
+						"type": "bytes4"
+					}
+				],
+				"name": "supportsInterface",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					},
+					{
+						"name": "_active",
+						"type": "bool"
+					}
+				],
+				"name": "updateActive",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"name": "",
+						"type": "string"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "getApproved",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "approve",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "priceInWeiToken",
+				"outputs": [
+					{
+						"name": "_priceInWei",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_tokenId",
+						"type": "uint256"
+					},
+					{
+						"name": "_uri",
+						"type": "string"
+					}
+				],
+				"name": "setTokenURI",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "totalSupply",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_koCommissionAccount",
+						"type": "address"
+					}
+				],
+				"name": "updateKoCommissionAccount",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "InterfaceId_ERC165",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bytes4"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "editionData",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_newBaseURI",
+						"type": "string"
+					}
+				],
+				"name": "updateTokenBaseURI",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_operator",
+						"type": "address"
+					},
+					{
+						"name": "_role",
+						"type": "uint8"
+					}
+				],
+				"name": "checkRole",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "transferFrom",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "totalPurchaseValueInWei",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_owner",
+						"type": "address"
+					},
+					{
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "tokenOfOwnerByIndex",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					},
+					{
+						"name": "_startDate",
+						"type": "uint256"
+					}
+				],
+				"name": "updateStartDate",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "artistCommission",
+				"outputs": [
+					{
+						"name": "_artistAccount",
+						"type": "address"
+					},
+					{
+						"name": "_artistCommission",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "tokenURIEdition",
+				"outputs": [
+					{
+						"name": "",
+						"type": "string"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "unpause",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "mint",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "safeTransferFrom",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "burn",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "totalNumberAvailable",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_operator",
+						"type": "address"
+					},
+					{
+						"name": "_role",
+						"type": "uint8"
+					}
+				],
+				"name": "addAddressToAccessControl",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "priceInWeiEdition",
+				"outputs": [
+					{
+						"name": "_priceInWei",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "tokenBaseURI",
+				"outputs": [
+					{
+						"name": "",
+						"type": "string"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "exists",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "tokenByIndex",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					},
+					{
+						"name": "_rate",
+						"type": "uint256"
+					}
+				],
+				"name": "updateArtistCommission",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "editionType",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_owner",
+						"type": "address"
+					}
+				],
+				"name": "tokensOf",
+				"outputs": [
+					{
+						"name": "_tokenIds",
+						"type": "uint256[]"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "paused",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "ownerOf",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "purchaseDatesEdition",
+				"outputs": [
+					{
+						"name": "_startDate",
+						"type": "uint256"
+					},
+					{
+						"name": "_endDate",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_artistsAccount",
+						"type": "address"
+					}
+				],
+				"name": "artistsEditions",
+				"outputs": [
+					{
+						"name": "_editionNumbers",
+						"type": "uint256[]"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "totalAvailableEdition",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "koCommissionAccount",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_owner",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "editionNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "detailsOfEdition",
+				"outputs": [
+					{
+						"name": "_editionData",
+						"type": "bytes32"
+					},
+					{
+						"name": "_editionType",
+						"type": "uint256"
+					},
+					{
+						"name": "_startDate",
+						"type": "uint256"
+					},
+					{
+						"name": "_endDate",
+						"type": "uint256"
+					},
+					{
+						"name": "_artistAccount",
+						"type": "address"
+					},
+					{
+						"name": "_artistCommission",
+						"type": "uint256"
+					},
+					{
+						"name": "_priceInWei",
+						"type": "uint256"
+					},
+					{
+						"name": "_tokenURI",
+						"type": "string"
+					},
+					{
+						"name": "_totalSupply",
+						"type": "uint256"
+					},
+					{
+						"name": "_totalAvailable",
+						"type": "uint256"
+					},
+					{
+						"name": "_active",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					},
+					{
+						"name": "_uri",
+						"type": "string"
+					}
+				],
+				"name": "updateEditionTokenURI",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "tokensOfEdition",
+				"outputs": [
+					{
+						"name": "_tokenIds",
+						"type": "uint256[]"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "underMint",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					},
+					{
+						"name": "_priceInWei",
+						"type": "uint256"
+					}
+				],
+				"name": "updatePriceInWei",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "editionOfTokenId",
+				"outputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "pause",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "purchaseTo",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					},
+					{
+						"name": "_editionData",
+						"type": "bytes32"
+					},
+					{
+						"name": "_editionType",
+						"type": "uint256"
+					},
+					{
+						"name": "_startDate",
+						"type": "uint256"
+					},
+					{
+						"name": "_endDate",
+						"type": "uint256"
+					},
+					{
+						"name": "_artistAccount",
+						"type": "address"
+					},
+					{
+						"name": "_artistCommission",
+						"type": "uint256"
+					},
+					{
+						"name": "_priceInWei",
+						"type": "uint256"
+					},
+					{
+						"name": "_tokenURI",
+						"type": "string"
+					},
+					{
+						"name": "_totalAvailable",
+						"type": "uint256"
+					}
+				],
+				"name": "createActiveEdition",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "ROLE_MINTER",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_operator",
+						"type": "address"
+					},
+					{
+						"name": "_role",
+						"type": "uint8"
+					}
+				],
+				"name": "hasRole",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "symbol",
+				"outputs": [
+					{
+						"name": "",
+						"type": "string"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_operator",
+						"type": "address"
+					},
+					{
+						"name": "_role",
+						"type": "uint8"
+					}
+				],
+				"name": "removeAddressFromAccessControl",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					},
+					{
+						"name": "_rate",
+						"type": "uint256"
+					},
+					{
+						"name": "_recipient",
+						"type": "address"
+					}
+				],
+				"name": "updateOptionalCommission",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "ROLE_UNDER_MINTER",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					},
+					{
+						"name": "_editionData",
+						"type": "bytes32"
+					},
+					{
+						"name": "_editionType",
+						"type": "uint256"
+					},
+					{
+						"name": "_startDate",
+						"type": "uint256"
+					},
+					{
+						"name": "_endDate",
+						"type": "uint256"
+					},
+					{
+						"name": "_artistAccount",
+						"type": "address"
+					},
+					{
+						"name": "_artistCommission",
+						"type": "uint256"
+					},
+					{
+						"name": "_priceInWei",
+						"type": "uint256"
+					},
+					{
+						"name": "_tokenURI",
+						"type": "string"
+					},
+					{
+						"name": "_totalSupply",
+						"type": "uint256"
+					},
+					{
+						"name": "_totalAvailable",
+						"type": "uint256"
+					}
+				],
+				"name": "createInactivePreMintedEdition",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "reclaimEther",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"name": "_approved",
+						"type": "bool"
+					}
+				],
+				"name": "setApprovalForAll",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "highestEditionNumber",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"name": "_tokenIds",
+						"type": "uint256[]"
+					}
+				],
+				"name": "batchTransfer",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					},
+					{
+						"name": "_editionData",
+						"type": "bytes32"
+					},
+					{
+						"name": "_editionType",
+						"type": "uint256"
+					},
+					{
+						"name": "_startDate",
+						"type": "uint256"
+					},
+					{
+						"name": "_endDate",
+						"type": "uint256"
+					},
+					{
+						"name": "_artistAccount",
+						"type": "address"
+					},
+					{
+						"name": "_artistCommission",
+						"type": "uint256"
+					},
+					{
+						"name": "_priceInWei",
+						"type": "uint256"
+					},
+					{
+						"name": "_tokenURI",
+						"type": "string"
+					},
+					{
+						"name": "_totalSupply",
+						"type": "uint256"
+					},
+					{
+						"name": "_totalAvailable",
+						"type": "uint256"
+					}
+				],
+				"name": "createActivePreMintedEdition",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					},
+					{
+						"name": "_artistAccount",
+						"type": "address"
+					}
+				],
+				"name": "updateArtistsAccount",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "tokenData",
+				"outputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					},
+					{
+						"name": "_editionType",
+						"type": "uint256"
+					},
+					{
+						"name": "_editionData",
+						"type": "bytes32"
+					},
+					{
+						"name": "_tokenURI",
+						"type": "string"
+					},
+					{
+						"name": "_owner",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "totalSupplyEdition",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"name": "_tokenId",
+						"type": "uint256"
+					},
+					{
+						"name": "_data",
+						"type": "bytes"
+					}
+				],
+				"name": "safeTransferFrom",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "purchaseDatesToken",
+				"outputs": [
+					{
+						"name": "_startDate",
+						"type": "uint256"
+					},
+					{
+						"name": "_endDate",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "editionActive",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "totalRemaining",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					},
+					{
+						"name": "_totalAvailable",
+						"type": "uint256"
+					}
+				],
+				"name": "updateTotalAvailable",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "ROLE_KNOWN_ORIGIN",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "editionExists",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "tokenURI",
+				"outputs": [
+					{
+						"name": "",
+						"type": "string"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					},
+					{
+						"name": "_editionType",
+						"type": "uint256"
+					}
+				],
+				"name": "updateEditionType",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "editionOptionalCommission",
+				"outputs": [
+					{
+						"name": "_rate",
+						"type": "uint256"
+					},
+					{
+						"name": "_recipient",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					},
+					{
+						"name": "_endDate",
+						"type": "uint256"
+					}
+				],
+				"name": "updateEndDate",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					},
+					{
+						"name": "_editionData",
+						"type": "bytes32"
+					},
+					{
+						"name": "_editionType",
+						"type": "uint256"
+					},
+					{
+						"name": "_startDate",
+						"type": "uint256"
+					},
+					{
+						"name": "_endDate",
+						"type": "uint256"
+					},
+					{
+						"name": "_artistAccount",
+						"type": "address"
+					},
+					{
+						"name": "_artistCommission",
+						"type": "uint256"
+					},
+					{
+						"name": "_priceInWei",
+						"type": "uint256"
+					},
+					{
+						"name": "_tokenURI",
+						"type": "string"
+					},
+					{
+						"name": "_totalAvailable",
+						"type": "uint256"
+					}
+				],
+				"name": "createInactiveEdition",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_type",
+						"type": "uint256"
+					}
+				],
+				"name": "editionsOfType",
+				"outputs": [
+					{
+						"name": "_editionNumbers",
+						"type": "uint256[]"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_owner",
+						"type": "address"
+					},
+					{
+						"name": "_operator",
+						"type": "address"
+					}
+				],
+				"name": "isApprovedForAll",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "purchase",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "totalNumberMinted",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"name": "_tokenIds",
+						"type": "uint256[]"
+					}
+				],
+				"name": "batchTransferFrom",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_editionNumber",
+						"type": "uint256"
+					},
+					{
+						"name": "_totalSupply",
+						"type": "uint256"
+					}
+				],
+				"name": "updateTotalSupply",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "tokenURISafe",
+				"outputs": [
+					{
+						"name": "",
+						"type": "string"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "constructor"
+			},
+			{
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "fallback"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_tokenId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"name": "_editionNumber",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"name": "_buyer",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"name": "_priceInWei",
+						"type": "uint256"
+					}
+				],
+				"name": "Purchase",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_tokenId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"name": "_editionNumber",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"name": "_buyer",
+						"type": "address"
+					}
+				],
+				"name": "Minted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_editionNumber",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"name": "_editionData",
+						"type": "bytes32"
+					},
+					{
+						"indexed": true,
+						"name": "_editionType",
+						"type": "uint256"
+					}
+				],
+				"name": "EditionCreated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "Pause",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "Unpause",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "previousOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipRenounced",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "operator",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"name": "role",
+						"type": "uint8"
+					}
+				],
+				"name": "RoleAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "operator",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"name": "role",
+						"type": "uint8"
+					}
+				],
+				"name": "RoleRemoved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "Transfer",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_owner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "_approved",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "Approval",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_owner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "_operator",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"name": "_approved",
+						"type": "bool"
+					}
+				],
+				"name": "ApprovalForAll",
+				"type": "event"
+			}
+		],
+		"devdoc": {
+			"methods": {
+				"approve(address,uint256)": {
+					"details": "Approves another address to transfer the given token ID\r The zero address indicates there is no approved address.\r There can only be one approved address per token at a given time.\r Can only be called by the token owner or an approved operator.\r",
+					"params": {
+						"_to": "address to be approved for the given token ID\r",
+						"_tokenId": "uint256 ID of the token to be approved\r"
+					}
+				},
+				"artistsEditions(address)": {
+					"details": "Lookup all editions for the given artist account\rReturns empty list if not valid\r"
+				},
+				"balanceOf(address)": {
+					"details": "Gets the balance of the specified address\r",
+					"params": {
+						"_owner": "address to query the balance of\r"
+					},
+					"return": "uint256 representing the amount owned by the passed address\r"
+				},
+				"batchTransfer(address,uint256[])": {
+					"details": "An extension to the default ERC721 behaviour, derived from ERC-875.\rAllowing for batch transfers from the sender, will fail if from does not own all the tokens\r"
+				},
+				"batchTransferFrom(address,address,uint256[])": {
+					"details": "An extension to the default ERC721 behaviour, derived from ERC-875.\rAllowing for batch transfers from the provided address, will fail if from does not own all the tokens\r"
+				},
+				"burn(uint256)": {
+					"details": "Private (KO only) method for burning tokens which have been created incorrectly\r"
+				},
+				"createActiveEdition(uint256,bytes32,uint256,uint256,uint256,address,uint256,uint256,string,uint256)": {
+					"details": "Creates an active edition from the given configuration\rOnly callable from KO staff/addresses\r"
+				},
+				"createActivePreMintedEdition(uint256,bytes32,uint256,uint256,uint256,address,uint256,uint256,string,uint256,uint256)": {
+					"details": "Creates an active edition from the given configuration\rThe concept of pre0minted editions means we can 'undermint' token IDS, good for holding back editions from public sale\rOnly callable from KO staff/addresses\r"
+				},
+				"createInactiveEdition(uint256,bytes32,uint256,uint256,uint256,address,uint256,uint256,string,uint256)": {
+					"details": "Creates an inactive edition from the given configuration\rOnly callable from KO staff/addresses\r"
+				},
+				"createInactivePreMintedEdition(uint256,bytes32,uint256,uint256,uint256,address,uint256,uint256,string,uint256,uint256)": {
+					"details": "Creates an inactive edition from the given configuration\rThe concept of pre0minted editions means we can 'undermint' token IDS, good for holding back editions from public sale\rOnly callable from KO staff/addresses\r"
+				},
+				"detailsOfEdition(uint256)": {
+					"details": "Main entry point for looking up edition config/metadata\rReverts if invalid edition number provided\r"
+				},
+				"editionExists(uint256)": {
+					"details": "Checks to see if the edition exists, assumes edition of zero is invalid\r"
+				},
+				"editionOfTokenId(uint256)": {
+					"details": "Lookup the edition of the provided token ID\rReturns 0 if not valid\r"
+				},
+				"editionOptionalCommission(uint256)": {
+					"details": "Lookup any optional commission split set for the edition\rBoth values will be zero if not present\r"
+				},
+				"editionsOfType(uint256)": {
+					"details": "Lookup all editions added for the given edition type\rReturns array of edition numbers, any zero edition ids can be ignore/stripped\r"
+				},
+				"exists(uint256)": {
+					"details": "Returns whether the specified token exists\r",
+					"params": {
+						"_tokenId": "uint256 ID of the token to query the existence of\r"
+					},
+					"return": "whether the token exists\r"
+				},
+				"getApproved(uint256)": {
+					"details": "Gets the approved address for a token ID, or zero if no address set\r",
+					"params": {
+						"_tokenId": "uint256 ID of the token to query the approval of\r"
+					},
+					"return": "address currently approved for the given token ID\r"
+				},
+				"isApprovedForAll(address,address)": {
+					"details": "Tells whether an operator is approved by a given owner\r",
+					"params": {
+						"_operator": "operator address which you want to query the approval of\r",
+						"_owner": "owner address which you want to query the approval of\r"
+					},
+					"return": "bool whether the given operator is approved by the given owner\r"
+				},
+				"mint(address,uint256)": {
+					"details": "Private (KO only) method for minting editions\rPayment not needed for this method\r"
+				},
+				"name()": {
+					"details": "Gets the token name\r",
+					"return": "string representing the token name\r"
+				},
+				"ownerOf(uint256)": {
+					"details": "Gets the owner of the specified token ID\r",
+					"params": {
+						"_tokenId": "uint256 ID of the token to query the owner of\r"
+					},
+					"return": "owner address currently marked as the owner of the given token ID\r"
+				},
+				"pause()": {
+					"details": "called by the owner to pause, triggers stopped state\r"
+				},
+				"purchase(uint256)": {
+					"details": "Public entry point for purchasing an edition\rReverts if edition is invalid\rReverts if payment not provided in full\rReverts if edition is sold out\rReverts if edition is not active or available\r"
+				},
+				"purchaseTo(address,uint256)": {
+					"details": "Public entry point for purchasing an edition on behalf of someone else\rReverts if edition is invalid\rReverts if payment not provided in full\rReverts if edition is sold out\rReverts if edition is not active or available\r"
+				},
+				"reclaimEther()": {
+					"details": "Transfer all Ether held by the contract to the owner.\r"
+				},
+				"renounceOwnership()": {
+					"details": "Allows the current owner to relinquish control of the contract.\r"
+				},
+				"safeTransferFrom(address,address,uint256)": {
+					"details": "Safely transfers the ownership of a given token ID to another address\r If the target address is a contract, it must implement `onERC721Received`,\r which is called upon a safe transfer, and return the magic value\r `bytes4(keccak256(\"onERC721Received(address,address,uint256,bytes)\"))`; otherwise,\r the transfer is reverted.\r      * Requires the msg sender to be the owner, approved, or operator\r",
+					"params": {
+						"_from": "current owner of the token\r",
+						"_to": "address to receive the ownership of the given token ID\r",
+						"_tokenId": "uint256 ID of the token to be transferred\r"
+					}
+				},
+				"safeTransferFrom(address,address,uint256,bytes)": {
+					"details": "Safely transfers the ownership of a given token ID to another address\r If the target address is a contract, it must implement `onERC721Received`,\r which is called upon a safe transfer, and return the magic value\r `bytes4(keccak256(\"onERC721Received(address,address,uint256,bytes)\"))`; otherwise,\r the transfer is reverted.\r Requires the msg sender to be the owner, approved, or operator\r",
+					"params": {
+						"_data": "bytes data to send along with a safe transfer check\r",
+						"_from": "current owner of the token\r",
+						"_to": "address to receive the ownership of the given token ID\r",
+						"_tokenId": "uint256 ID of the token to be transferred\r"
+					}
+				},
+				"setApprovalForAll(address,bool)": {
+					"details": "Sets or unsets the approval of a given operator\r An operator is allowed to transfer all tokens of the sender on their behalf\r",
+					"params": {
+						"_approved": "representing the status of the approval to be set\r",
+						"_to": "operator address to set the approval\r"
+					}
+				},
+				"supportsInterface(bytes4)": {
+					"details": "implement supportsInterface(bytes4) using a lookup table\r"
+				},
+				"symbol()": {
+					"details": "Gets the token symbol\r",
+					"return": "string representing the token symbol\r"
+				},
+				"tokenByIndex(uint256)": {
+					"details": "Gets the token ID at a given index of all the tokens in this contract\r Reverts if the index is greater or equal to the total number of tokens\r",
+					"params": {
+						"_index": "uint256 representing the index to be accessed of the tokens list\r"
+					},
+					"return": "uint256 token ID at the given index of the tokens list\r"
+				},
+				"tokenData(uint256)": {
+					"details": "Lookup a tokens common identifying characteristics\rReverts if invalid token ID provided\r"
+				},
+				"tokenOfOwnerByIndex(address,uint256)": {
+					"details": "Gets the token ID at a given index of the tokens list of the requested owner\r",
+					"params": {
+						"_index": "uint256 representing the index to be accessed of the requested tokens list\r",
+						"_owner": "address owning the tokens list to be accessed\r"
+					},
+					"return": "uint256 token ID at the given index of the tokens list owned by the requested address\r"
+				},
+				"tokensOf(address)": {
+					"details": "Lookup all owned tokens for the provided address\rReturns array of token IDs\r"
+				},
+				"tokensOfEdition(uint256)": {
+					"details": "Lookup all tokens minted for the given edition number\rReturns array of token IDs, any zero edition ids can be ignore/stripped\r"
+				},
+				"totalSupply()": {
+					"details": "Gets the total amount of tokens stored by the contract\r",
+					"return": "uint256 representing the total amount of tokens\r"
+				},
+				"transferFrom(address,address,uint256)": {
+					"details": "Transfers the ownership of a given token ID to another address\r Usage of this method is discouraged, use `safeTransferFrom` whenever possible\r Requires the msg sender to be the owner, approved, or operator\r",
+					"params": {
+						"_from": "current owner of the token\r",
+						"_to": "address to receive the ownership of the given token ID\r",
+						"_tokenId": "uint256 ID of the token to be transferred\r"
+					}
+				},
+				"transferOwnership(address)": {
+					"details": "Allows the current owner to transfer control of the contract to a newOwner.\r",
+					"params": {
+						"_newOwner": "The address to transfer ownership to.\r"
+					}
+				},
+				"underMint(address,uint256)": {
+					"details": "Private (KO only) method for under minting editions\rUnder minting allows for token IDs to be back filled if total supply is not set to zero by default\rPayment not needed for this method\r"
+				},
+				"unpause()": {
+					"details": "called by the owner to unpause, returns to normal state\r"
+				}
+			},
+			"title": "KnownOriginDigitalAsset - V2\r  * http://www.knownorigin.io/\r  * ERC721 compliant digital assets for real-world artwork.\r  * Base NFT Issuance Contract\r  * BE ORIGINAL. BUY ORIGINAL.\r  "
+		},
+		"userdoc": {
+			"methods": {
+				"addAddressToAccessControl(address,uint8)": {
+					"notice": "/////////////////////////////////"
+				},
+				"editionData(uint256)": {
+					"notice": "///////////////////////"
+				},
+				"renounceOwnership()": {
+					"notice": "Renouncing to ownership will leave the contract without an owner.\r It will not be possible to call the functions with the `onlyOwner`\r modifier anymore.\r"
+				},
+				"setTokenURI(uint256,string)": {
+					"notice": "////////////////"
+				},
+				"updateEditionTokenURI(uint256,string)": {
+					"notice": "//////////////////"
+				},
+				"updateTokenBaseURI(string)": {
+					"notice": "///////////////"
+				}
+			}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Online/NFT/KnownOriginDigitalAssetV2.sol": "KnownOriginDigitalAssetV2"
+		},
+		"evmVersion": "byzantium",
+		"libraries": {},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Online/NFT/KnownOriginDigitalAssetV2.sol": {
+			"keccak256": "0x5dcda4d3d013bd9344995c93405a05a5bca40979fb4709b204c5cf0c686f71e7",
+			"urls": [
+				"bzzr://dd568e353fdbc69d2bd656e6325e110e85164d8ee10225dd02fae80e5944cfb0"
+			]
+		}
+	},
+	"version": 1
+}

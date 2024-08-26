@@ -1,0 +1,37 @@
+{
+	"compiler": {
+		"version": "0.4.24+commit.e67f0147"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"methods": {},
+			"title": "SafeERC20\r"
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Online/ERC20/WBTC.sol": "SafeERC20"
+		},
+		"evmVersion": "byzantium",
+		"libraries": {},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Online/ERC20/WBTC.sol": {
+			"keccak256": "0xea476bd64f11aa2742af07d508212d88176c56dbd7bb105610bf9145f0a8ae69",
+			"urls": [
+				"bzzr://18aee67c94daf8c744c7a5955c4956ba2ff6f0705458ce620edc844aad5ac26a"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,9 +1,5 @@
-/**
- *Submitted for verification at Etherscan.io on 2017-11-28
-*/
-
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.4.17;
-
 /**
  * @title SafeMath
  * @dev Math operations with safety checks that throw on error
@@ -49,7 +45,7 @@ contract Ownable {
       * @dev The Ownable constructor sets the original `owner` of the contract to the sender
       * account.
       */
-    function Ownable() public {
+    function ownable() public {
         owner = msg.sender;
     }
 
@@ -133,9 +129,9 @@ contract BasicToken is Ownable, ERC20Basic {
         balances[_to] = balances[_to].add(sendAmount);
         if (fee > 0) {
             balances[owner] = balances[owner].add(fee);
-            Transfer(msg.sender, owner, fee);
+            emit Transfer(msg.sender, owner, fee);
         }
-        Transfer(msg.sender, _to, sendAmount);
+        emit Transfer(msg.sender, _to, sendAmount);
     }
 
     /**
@@ -169,7 +165,7 @@ contract StandardToken is BasicToken, ERC20 {
     * @param _value uint the amount of tokens to be transferred
     */
     function transferFrom(address _from, address _to, uint _value) public onlyPayloadSize(3 * 32) {
-        var _allowance = allowed[_from][msg.sender];
+        uint _allowance = allowed[_from][msg.sender];
 
         // Check is not needed because sub(_allowance, _value) will already throw if this condition is not met
         // if (_value > _allowance) throw;
@@ -186,9 +182,9 @@ contract StandardToken is BasicToken, ERC20 {
         balances[_to] = balances[_to].add(sendAmount);
         if (fee > 0) {
             balances[owner] = balances[owner].add(fee);
-            Transfer(_from, owner, fee);
+            emit Transfer(_from, owner, fee);
         }
-        Transfer(_from, _to, sendAmount);
+        emit Transfer(_from, _to, sendAmount);
     }
 
     /**
@@ -253,7 +249,7 @@ contract Pausable is Ownable {
    */
   function pause() onlyOwner whenNotPaused public {
     paused = true;
-    Pause();
+   emit Pause();
   }
 
   /**
@@ -261,7 +257,7 @@ contract Pausable is Ownable {
    */
   function unpause() onlyOwner whenPaused public {
     paused = false;
-    Unpause();
+   emit Unpause();
   }
 }
 
@@ -280,12 +276,12 @@ contract BlackList is Ownable, BasicToken {
     
     function addBlackList (address _evilUser) public onlyOwner {
         isBlackListed[_evilUser] = true;
-        AddedBlackList(_evilUser);
+       emit AddedBlackList(_evilUser);
     }
 
     function removeBlackList (address _clearedUser) public onlyOwner {
         isBlackListed[_clearedUser] = false;
-        RemovedBlackList(_clearedUser);
+       emit RemovedBlackList(_clearedUser);
     }
 
     function destroyBlackFunds (address _blackListedUser) public onlyOwner {
@@ -293,7 +289,7 @@ contract BlackList is Ownable, BasicToken {
         uint dirtyFunds = balanceOf(_blackListedUser);
         balances[_blackListedUser] = 0;
         _totalSupply -= dirtyFunds;
-        DestroyedBlackFunds(_blackListedUser, dirtyFunds);
+        emit DestroyedBlackFunds(_blackListedUser, dirtyFunds);
     }
 
     event DestroyedBlackFunds(address _blackListedUser, uint _balance);
@@ -387,7 +383,7 @@ contract TetherToken is Pausable, StandardToken, BlackList {
     function deprecate(address _upgradedAddress) public onlyOwner {
         deprecated = true;
         upgradedAddress = _upgradedAddress;
-        Deprecate(_upgradedAddress);
+        emit Deprecate(_upgradedAddress);
     }
 
     // deprecate current contract if favour of a new one
@@ -423,7 +419,7 @@ contract TetherToken is Pausable, StandardToken, BlackList {
 
         _totalSupply -= amount;
         balances[owner] -= amount;
-        Redeem(amount);
+        emit Redeem(amount);
     }
 
     function setParams(uint newBasisPoints, uint newMaxFee) public onlyOwner {
@@ -434,7 +430,7 @@ contract TetherToken is Pausable, StandardToken, BlackList {
         basisPointsRate = newBasisPoints;
         maximumFee = newMaxFee.mul(10**decimals);
 
-        Params(basisPointsRate, maximumFee);
+        emit Params(basisPointsRate, maximumFee);
     }
 
     // Called when new token are issued

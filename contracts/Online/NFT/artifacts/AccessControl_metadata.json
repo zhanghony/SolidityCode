@@ -1,0 +1,215 @@
+{
+	"compiler": {
+		"version": "0.4.26+commit.4563c3fc"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_operator",
+						"type": "address"
+					},
+					{
+						"name": "_role",
+						"type": "uint8"
+					}
+				],
+				"name": "checkRole",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_operator",
+						"type": "address"
+					},
+					{
+						"name": "_role",
+						"type": "uint8"
+					}
+				],
+				"name": "addAddressToAccessControl",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "ROLE_MINTER",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_operator",
+						"type": "address"
+					},
+					{
+						"name": "_role",
+						"type": "uint8"
+					}
+				],
+				"name": "hasRole",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_operator",
+						"type": "address"
+					},
+					{
+						"name": "_role",
+						"type": "uint8"
+					}
+				],
+				"name": "removeAddressFromAccessControl",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "ROLE_UNDER_MINTER",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "ROLE_KNOWN_ORIGIN",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "operator",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"name": "role",
+						"type": "uint8"
+					}
+				],
+				"name": "RoleAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "operator",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"name": "role",
+						"type": "uint8"
+					}
+				],
+				"name": "RoleRemoved",
+				"type": "event"
+			}
+		],
+		"devdoc": {
+			"methods": {},
+			"title": "Based on OpenZeppelin Whitelist & RBCA contracts\r"
+		},
+		"userdoc": {
+			"methods": {
+				"addAddressToAccessControl(address,uint8)": {
+					"notice": "/////////////////////////////////"
+				}
+			}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Online/NFT/KnownOriginDigitalAssetV2.sol": "AccessControl"
+		},
+		"evmVersion": "byzantium",
+		"libraries": {},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Online/NFT/KnownOriginDigitalAssetV2.sol": {
+			"keccak256": "0x5dcda4d3d013bd9344995c93405a05a5bca40979fb4709b204c5cf0c686f71e7",
+			"urls": [
+				"bzzr://dd568e353fdbc69d2bd656e6325e110e85164d8ee10225dd02fae80e5944cfb0"
+			]
+		}
+	},
+	"version": 1
+}

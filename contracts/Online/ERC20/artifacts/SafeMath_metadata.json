@@ -1,0 +1,37 @@
+{
+	"compiler": {
+		"version": "0.4.24+commit.e67f0147"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"methods": {},
+			"title": "SafeMath\r"
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Online/ERC20/TetherToken.sol": "SafeMath"
+		},
+		"evmVersion": "byzantium",
+		"libraries": {},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Online/ERC20/TetherToken.sol": {
+			"keccak256": "0x1be4c35b4a2fe43aa8634352b33338e83e01c821ce429b205acfd0c573367fac",
+			"urls": [
+				"bzzr://e4b62ea0df615e3876e2e264b43942fada818008cadc1ae4530c2fcca01199a5"
+			]
+		}
+	},
+	"version": 1
+}
