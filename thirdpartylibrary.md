@@ -1,4 +1,9 @@
 
+// 查看插件版本列表
+npm view @openzeppelin/contracts versions
+
+
+
 
 @nomicfoundation/hardhat-toolbox
 
@@ -24,3 +29,6 @@ npm install @uniswap/v2-core
 
 // 
 npm install @uniswap/v2-periphery
+
+// layer2 
+npm install @eth-optimism/contracts --legacy-peer-deps
