@@ -1,7 +1,7 @@
 以太坊二层（Layer 2）解决方案是为了解决以太坊主网的扩展性问题而开发的。在二层链上开发 Solidity 智能合约有一些特殊的考虑和优势。以下是关于在以太坊二层链上进行 Solidity 开发的一些关键点：
 1. 主要二层解决方案：
 Optimistic Rollups（如 Optimism, Arbitrum）
-ZK Rollups（如 zkSync, StarkNet）
+ZK Rollups（如 [zkSync](https://docs.zksync.io/build) , StarkNet） 
 状态通道（如 Raiden Network）
 Plasma 链
 2. 开发环境：
